@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snooker Game - Physics Simulation</title>
+    
+    <!-- Import p5.js and matter.js libraries from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+    
+    <!-- CSS Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: white;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1040px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #3498db;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        header p {
+            font-size: 1.1em;
+            color: #bdc3c7;
+        }
+        
+        .controls {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .controls h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .control-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .control-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .control-item strong {
+            color: #3498db;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .key {
+            display: inline-block;
+            background: #34495e;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            margin-right: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        #gameCanvas {
+            border: 3px solid #34495e;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            color: #95a5a6;
+        }
+        
+        .github-link {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .github-link:hover {
+            color: #5dade2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎱 Snooker Physics Simulation</h1>
+            <p>A browser-based snooker game built with p5.js and Matter.js</p>
+        </header>
+        
+        <div class="controls">
+            <h2>How to Play</h2>
+            <div class="control-grid">
+                <div class="control-item">
+                    <strong>Setup Modes:</strong>
+                    <span class="key">1</span> Standard snooker positions<br>
+                    <span class="key">2</span> Random reds only<br>
+                    <span class="key">3</span> All balls random
+                </div>
+                <div class="control-item">
+                    <strong>Gameplay:</strong>
+                    Click in the <strong>D-zone</strong> (left semicircle) to place the cue ball<br>
+                    Drag mouse to aim and set power<br>
+                    Release to shoot
+                </div>
+                <div class="control-item">
+                    <strong>Controls:</strong>
+                    <span class="key">A</span> Toggle aim assist line<br>
+                    <span class="key">R</span> Reset game
+                </div>
+            </div>
+        </div>
+        
+        <main id="gameCanvas"></main>
+        
+        <footer>
+            <p>Created as a learning project to explore physics simulation and game development</p>
+            <p>Built with ❤️ using JavaScript, p5.js, and Matter.js</p>
+        </footer>
+    </div>
+    
+    <!-- Import all JavaScript files in the necessary order -->
+    <script src="constants.js"></script>
+    <script src="variables.js"></script>
+    <script src="setup.js"></script>
+    <script src="table.js"></script>
+    <script src="balls.js"></script>
+    <script src="cue.js"></script>
+    <script src="physics.js"></script>
+    <script src="input.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
