@@ -4,7 +4,7 @@ A browser-based snooker game built during my second year of Computer Science stu
 
 ![Snooker Game](screenshot.png)
 
-## 🎮 [Play the Live Demo](https://yourusername.github.io/snooker-game/)
+## 🎮 [Play the Live Demo](https://hamzabadat.github.io/Snooker-Game/)
 
 ## 📖 About This Project
 
@@ -85,14 +85,6 @@ snooker-game/
 ├── input.js           # Keyboard and mouse input handling
 └── game.js            # Game logic, scoring, and UI
 ```
-
-### Key Design Decisions
-
-1. **Constants File**: All "magic numbers" extracted to a constants file for easy tweaking
-2. **Modular Design**: Each file has a single responsibility
-3. **Physics Configuration**: Adjustable ball friction, restitution, and air resistance
-4. **Proportional Sizing**: Table and ball sizes calculated proportionally for scalability
-
 ## 🚀 Running Locally
 
 1. Clone this repository
@@ -106,15 +98,6 @@ cd snooker-game
    - No server needed!
    - Just open the file and play
 
-## 🌐 Deploying to GitHub Pages
-
-1. Push your code to GitHub
-2. Go to your repository settings
-3. Navigate to "Pages" in the left sidebar
-4. Under "Source", select your main branch
-5. Click Save
-6. Your game will be live at `https://yourusername.github.io/snooker-game/`
-
 ## 📚 Known Limitations
 
 This is a learning project with some intentional simplifications:
@@ -127,12 +110,6 @@ This is a learning project with some intentional simplifications:
 
 These limitations were conscious choices to focus on core physics simulation and code architecture rather than building a complete snooker game.
 
-## 🎓 Reflection
-
-This project was completed during my 2nd year of CS studies (2023). While functional and demonstrating solid fundamentals, it reflects my skills at that time. For more recent work showcasing my current abilities, please see:
-
-- [Link to newer project 1]
-- [Link to newer project 2]
 
 ## 🤝 Acknowledgments
 
