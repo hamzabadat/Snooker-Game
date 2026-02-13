@@ -2,6 +2,8 @@
 
 A browser-based snooker game built during my second year of Computer Science studies to learn about physics simulation, collision detection, and game development principles.
 
+Demo Link: https://hamzabadat.github.io/Snooker-Game/
+
 ---
 
 📖 About This Project
